@@ -1,0 +1,11 @@
+[Unit]
+Description="Beeps the system whenever a secret code is sent to the correct port"
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/opt/.beep/get_beeped.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
